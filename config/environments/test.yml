@@ -1,13 +1,13 @@
 name: "TaxiApp"
 version: "0.0.1"
-host: "0.0.0.0:9000"
+host: "0.0.0.0:80"
 log:
-  level: debug
+  level: "debug"
 database:
   host: $MONGOLAB_URI
   name: "development"
 token:
-  expiration : 72
+  expiration : "72"
   secret: "33d17f49b99a5f71bc86c01bb668014bef22bda0"
 email:
   host: $EMAIL_DOMAIN
