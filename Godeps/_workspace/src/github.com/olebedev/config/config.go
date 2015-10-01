@@ -13,7 +13,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/creativelikeadog/go-taxi-api/Godeps/_workspace/src/gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v2"
 )
 
 // Config ---------------------------------------------------------------------

@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/creativelikeadog/go-taxi-api/Godeps/_workspace/src/gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2"
 	"gopkg.in/tomb.v2"
 )
 

@@ -1,7 +1,7 @@
 package hello
 
 import (
-	"github.com/creativelikeadog/go-taxi-api/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 	"net/http"
 )
 

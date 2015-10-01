@@ -7,7 +7,7 @@ log:
   rotate: true
   level: error
 database:
-  host: $MONGO_HOST
+  host: $MONGOLAB_URI
   name: "production"
 token:
   expiration : 72
