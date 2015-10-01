@@ -7,7 +7,7 @@ log:
   rotate: true
   level: error
 database:
-  host: $MONGO_PORT_27017_TCP_ADDR
+  host: $MONGO_HOST
   name: "production"
 token:
   expiration : 72
