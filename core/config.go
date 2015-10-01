@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/olebedev/config"
 	"os"
-	"fmt"
 	"regexp"
 )
 
