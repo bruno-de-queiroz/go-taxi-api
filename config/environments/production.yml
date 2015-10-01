@@ -1,6 +1,6 @@
 name: "TaxiApp"
 version: "0.0.1"
-host: "0.0.0.0:80"
+host: ":80"
 log:
   level: "debug"
 database:
