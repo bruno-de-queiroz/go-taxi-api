@@ -117,7 +117,7 @@ func parseEnvs(p string) ([]byte, error) {
 	}
 
 
-	fmt.Println(data)
+	fmt.Println(string(data))
 
 	return data, nil
 }
