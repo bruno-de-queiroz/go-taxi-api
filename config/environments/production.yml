@@ -1,0 +1,20 @@
+name: "TaxiApp"
+version: "0.0.1"
+port: 80
+host: "0.0.0.0"
+log:
+  file: /var/log/brow-taxi.log
+  rotate: true
+  level: error
+database:
+  host: $MONGO_PORT_27017_TCP_ADDR
+  name: "production"
+token:
+  expiration : 72
+  secret: "33d17f49b99a5f71bc86c01bb668014bef22bda0"
+email:
+  host: $EMAIL_DOMAIN
+  port: $EMAIL_PORT
+  username: $EMAIL_USERNAME
+  password: $EMAIL_PASSWORD
+  sender: $EMAIL_SENDER
