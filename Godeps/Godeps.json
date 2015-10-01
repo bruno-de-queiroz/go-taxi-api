@@ -1,0 +1,23 @@
+{
+    "ImportPath" : "github.com/creativelikeadog/go-taxi-api",
+    "GoVersion": "go1.5",
+    "Packages": [
+        "./app/controllers"
+        "./app/exceptions"
+        "./app/forms"
+        "./app/mailers"
+        "./app/models"
+        "./app/services"
+        "./config"
+        "./core"
+    ],
+    "Deps": [
+        "github.com/gin-gonic/gin",
+        "gopkg.in/mgo.v2",
+        "github.com/satori/go.uuid",
+        "github.com/olebedev/config",
+        "code.google.com/p/log4go",
+        "github.com/dgrijalva/jwt-go",
+        "golang.org/x/crypto/bcrypt"
+    ]
+}
