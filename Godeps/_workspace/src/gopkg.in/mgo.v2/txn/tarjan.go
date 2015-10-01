@@ -1,7 +1,7 @@
 package txn
 
 import (
-	"github.com/creativelikeadog/go-taxi-api/Godeps/_workspace/src/gopkg.in/mgo.v2/bson"
+	"gopkg.in/mgo.v2/bson"
 	"sort"
 )
 

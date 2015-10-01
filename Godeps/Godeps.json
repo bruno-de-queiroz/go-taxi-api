@@ -1,9 +1,6 @@
 {
 	"ImportPath": "github.com/creativelikeadog/go-taxi-api",
 	"GoVersion": "go1.5.1",
-	"Packages": [
-		"./"
-	],
 	"Deps": [
 		{
 			"ImportPath": "code.google.com/p/log4go",
