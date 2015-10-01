@@ -103,7 +103,7 @@ func parseEnvs(p string) ([]byte, error) {
 	scanner := bufio.NewScanner(reader)
 
 	for scanner.Scan() {
-		parsed := s + "\n"
+		parsed := scanner.Text() + "\n"
 		p := regex.FindAllStringSubmatch(parsed, -1)
 		if len(p) > 0 {
 			parsed = fmt.Sprintf("%s\"%s\"\n", p[0][1], os.Getenv(p[0][2]))
