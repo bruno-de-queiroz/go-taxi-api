@@ -5,7 +5,7 @@ log:
   level: "debug"
 database:
   host: $MONGODB_HOST
-  name: "development"
+  name: $MONGODB_DATABASE
 token:
   expiration : "72"
   secret: "33d17f49b99a5f71bc86c01bb668014bef22bda0"
