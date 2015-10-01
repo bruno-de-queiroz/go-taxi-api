@@ -5,10 +5,10 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"taxiapp.com.br/app/forms"
-	"taxiapp.com.br/app/mailers"
-	"taxiapp.com.br/app/models"
-	"taxiapp.com.br/core"
+	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
+	"github.com/creativelikeadog/taxiapp.com.br/app/mailers"
+	"github.com/creativelikeadog/taxiapp.com.br/app/models"
+	"github.com/creativelikeadog/taxiapp.com.br/core"
 )
 
 type TokenType int

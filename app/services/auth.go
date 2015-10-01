@@ -5,11 +5,11 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"gopkg.in/mgo.v2/bson"
 	"net/http"
-	"taxiapp.com.br/app/exceptions"
-	"taxiapp.com.br/app/forms"
-	"taxiapp.com.br/app/mailers"
-	"taxiapp.com.br/app/models"
-	"taxiapp.com.br/core"
+	"github.com/creativelikeadog/taxiapp.com.br/app/exceptions"
+	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
+	"github.com/creativelikeadog/taxiapp.com.br/app/mailers"
+	"github.com/creativelikeadog/taxiapp.com.br/app/models"
+	"github.com/creativelikeadog/taxiapp.com.br/core"
 	"time"
 )
 

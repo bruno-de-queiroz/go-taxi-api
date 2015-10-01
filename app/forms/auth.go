@@ -1,6 +1,6 @@
 package forms
 import (
-	"taxiapp.com.br/app/exceptions"
+	"github.com/creativelikeadog/taxiapp.com.br/app/exceptions"
 )
 
 type AuthForm struct {

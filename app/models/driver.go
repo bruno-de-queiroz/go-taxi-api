@@ -2,7 +2,7 @@ package models
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"taxiapp.com.br/app/forms"
+	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
 	"time"
 )
 

@@ -4,9 +4,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2/bson"
 	"net/http"
-	"taxiapp.com.br/app/forms"
-	"taxiapp.com.br/app/services"
-	"taxiapp.com.br/core"
+	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
+	"github.com/creativelikeadog/taxiapp.com.br/app/services"
+	"github.com/creativelikeadog/taxiapp.com.br/core"
 )
 
 type AuthController struct {

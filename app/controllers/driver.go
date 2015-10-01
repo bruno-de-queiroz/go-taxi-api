@@ -7,10 +7,10 @@ import (
 	"gopkg.in/mgo.v2/bson"
 	"net/http"
 	"strconv"
-	"taxiapp.com.br/app/forms"
-	"taxiapp.com.br/app/models"
-	"taxiapp.com.br/app/services"
-	"taxiapp.com.br/core"
+	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
+	"github.com/creativelikeadog/taxiapp.com.br/app/models"
+	"github.com/creativelikeadog/taxiapp.com.br/app/services"
+	"github.com/creativelikeadog/taxiapp.com.br/core"
 )
 
 type DriverController struct {
