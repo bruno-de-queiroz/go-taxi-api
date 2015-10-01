@@ -1,1 +1,1 @@
-web: go-api-taxi
+web: go-taxi-api
