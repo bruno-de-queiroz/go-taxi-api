@@ -2,13 +2,13 @@
     "ImportPath" : "github.com/creativelikeadog/go-taxi-api",
     "GoVersion": "go1.5",
     "Packages": [
-        "./app/controllers"
-        "./app/exceptions"
-        "./app/forms"
-        "./app/mailers"
-        "./app/models"
-        "./app/services"
-        "./config"
+        "./app/controllers",
+        "./app/exceptions",
+        "./app/forms",
+        "./app/mailers",
+        "./app/models",
+        "./app/services",
+        "./config",
         "./core"
     ],
     "Deps": [
