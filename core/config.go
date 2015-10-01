@@ -94,7 +94,6 @@ func parseEnvs(p string) ([]byte, error) {
 		return nil, err
 	}
 
-
 	defer f.Close()
 	data := make([]byte, 0)
 	reader := bufio.NewReader(f)
@@ -109,9 +108,6 @@ func parseEnvs(p string) ([]byte, error) {
 
 		data = append(data, []byte(parsed)...)
 	}
-
-
-	fmt.Println(string(data))
 
 	return data, nil
 }

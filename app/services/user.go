@@ -181,7 +181,7 @@ func NewUserService(app *core.Application) *UserService {
 	})
 
 	if err != nil {
-		panic(err)
+		app.Logger.Error(err)
 	}
 
 	return &UserService{app.Logger, ad, app.EmailSender}

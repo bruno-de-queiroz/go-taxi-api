@@ -187,5 +187,5 @@ func (C *DriverController) SetDriver(c *gin.Context) {
 }
 
 func NewDriverController(app *core.Application) *DriverController {
-	return &DriverController{app.Logger, services.NewDriverService(app.Config.Database)}
+	return &DriverController{app.Logger, services.NewDriverService(app)}
 }

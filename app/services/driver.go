@@ -125,7 +125,9 @@ func (s *DriverService) One(id bson.ObjectId) (m *models.Driver, err error) {
 	return m, nil
 }
 
-func NewDriverService(config *core.DatabaseConfig) *DriverService {
+func NewDriverService(app *core.Application) *DriverService {
+
+	config := app.Config.Database
 
 	ad := core.NewMongoAdapter(config.Host, config.Name, "drivers")
 
@@ -152,7 +154,7 @@ func NewDriverService(config *core.DatabaseConfig) *DriverService {
 	})
 
 	if err != nil {
-		panic(err)
+		app.Logger.Error(err)
 	}
 
 	return &DriverService{ad}

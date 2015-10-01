@@ -4,7 +4,7 @@ host: "0.0.0.0:80"
 log:
   level: "debug"
 database:
-  host: $MONGOLAB_URI
+  host: $MONGODB_HOST
   name: "development"
 token:
   expiration : "72"
