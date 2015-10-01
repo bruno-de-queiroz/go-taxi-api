@@ -1,23 +1,66 @@
 {
-    "ImportPath" : "github.com/creativelikeadog/go-taxi-api",
-    "GoVersion": "go1.5",
-    "Packages": [
-        "./app/controllers",
-        "./app/exceptions",
-        "./app/forms",
-        "./app/mailers",
-        "./app/models",
-        "./app/services",
-        "./config",
-        "./core"
-    ],
-    "Deps": [
-        "github.com/gin-gonic/gin",
-        "gopkg.in/mgo.v2",
-        "github.com/satori/go.uuid",
-        "github.com/olebedev/config",
-        "code.google.com/p/log4go",
-        "github.com/dgrijalva/jwt-go",
-        "golang.org/x/crypto/bcrypt"
-    ]
+	"ImportPath": "github.com/creativelikeadog/go-taxi-api",
+	"GoVersion": "go1.5.1",
+	"Packages": [
+		"./"
+	],
+	"Deps": [
+		{
+			"ImportPath": "code.google.com/p/log4go",
+			"Comment": "go.weekly.2012-02-22-1",
+			"Rev": "c3294304d93f48a37d3bed1d382882a9c2989f99"
+		},
+		{
+			"ImportPath": "github.com/dgrijalva/jwt-go",
+			"Comment": "v2.3.0-6-gf62f64e",
+			"Rev": "f62f64ea222e5e6d6d86421b5507b0862a3ebf7f"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.0rc1-148-g52fcc5d",
+			"Rev": "52fcc5dbf6e94df33ad313858fb94b713e9d1b4a"
+		},
+		{
+			"ImportPath": "github.com/manucorporat/sse",
+			"Rev": "fe6ea2c8e398672518ef204bf0fbd9af858d0e15"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Rev": "40e4aedc8fabf8c23e040057540867186712faa5"
+		},
+		{
+			"ImportPath": "github.com/olebedev/config",
+			"Rev": "ed583f7fafbccbd73013b0379ab29943ab0da34b"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Rev": "08f0718b61e95ddba0ade3346725fe0e4bf28ca6"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "0c93e1ff9f91f0c63bf17b123de503d023434fdd"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "0c93e1ff9f91f0c63bf17b123de503d023434fdd"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "c2528b2dd8352441850638a8bb678c2ad056fd3e"
+		},
+		{
+			"ImportPath": "gopkg.in/bluesuncorp/validator.v5",
+			"Comment": "v5.12",
+			"Rev": "d5acf1dac43705f8bfbb71d878e290e2bed3950b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2015.06.03-5-g22287ba",
+			"Rev": "22287bab4379e1fbf6002fb4eb769888f3fb224c"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "53feefa2559fb8dfa8d81baad31be332c97d6c77"
+		}
+	]
 }
