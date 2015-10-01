@@ -19,7 +19,7 @@ func (C *MongoAdapter) clone() (session *mgo.Session, err error) {
 		C.session.SetMode(mgo.Monotonic, true)
 	}
 
-	return C.session.Clone(), nil
+	return C.session.Copy(), nil
 }
 
 func (C *MongoAdapter) Action(a func(*mgo.Collection) error) (err error) {
