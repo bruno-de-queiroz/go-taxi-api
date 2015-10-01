@@ -95,5 +95,5 @@ func NewApplication(p string, cfgs ...string) *Application {
 }
 
 func (a Application) Start() {
-	a.Run(fmt.Sprintf("%s", a.Config.Host))
+	a.Run(fmt.Sprintf(":%s", a.Config.Port))
 }

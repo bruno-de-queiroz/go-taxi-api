@@ -62,7 +62,7 @@ type Config struct {
 	Log        *LogConfig
 	Name       string
 	Version    string
-	Host       string
+	Port       string
 	Mode       string
 }
 
@@ -164,7 +164,7 @@ func NewConfig(e string, p string) (c *Config, err error) {
 		&LogConfig{lg.UBool("rotate"), lg.UString("level"), lg.UString("file"), lg.UString("format")},
 		cfg.UString("name"),
 		cfg.UString("version"),
-		cfg.UString("host"),
+		cfg.UString("port"),
 		mode,
 	}
 
