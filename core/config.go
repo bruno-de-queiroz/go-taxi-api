@@ -90,16 +90,6 @@ func (cfg *Config) ExtendWithFile(p string) (err error) {
 	return cfg.Set(ps[0][1], cc.Root)
 }
 
-func appendParsed(data []byte, s string) []byte {
-	parsed := s + "\n"
-	p := regex.FindAllStringSubmatch(parsed, -1)
-	if len(p) > 0 {
-		parsed = fmt.Sprintf("%s\"%s\"\n", p[0][1], os.Getenv(p[0][2]))
-	}
-
-	return append(data, []byte(parsed)...)
-}
-
 func parseEnvs(p string) ([]byte, error) {
 	f, err := os.Open(p)
 	if err != nil {
@@ -113,7 +103,13 @@ func parseEnvs(p string) ([]byte, error) {
 	scanner := bufio.NewScanner(reader)
 
 	for scanner.Scan() {
-		data = appendParsed(data, scanner.Text())
+		parsed := s + "\n"
+		p := regex.FindAllStringSubmatch(parsed, -1)
+		if len(p) > 0 {
+			parsed = fmt.Sprintf("%s\"%s\"\n", p[0][1], os.Getenv(p[0][2]))
+		}
+
+		data = append(data,[]byte(parsed)...)
 	}
 
 
