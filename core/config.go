@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/olebedev/config"
 	"os"
+	"fmt"
 	"regexp"
 )
 
@@ -106,6 +107,7 @@ func parseEnvs(p string) ([]byte, error) {
 		return nil, err
 	}
 
+
 	defer f.Close()
 	data := make([]byte, 0)
 	reader := bufio.NewReader(f)
@@ -114,6 +116,9 @@ func parseEnvs(p string) ([]byte, error) {
 	for scanner.Scan() {
 		data = appendParsed(data, scanner.Text())
 	}
+
+
+	fmt.Println(data)
 
 	return data, nil
 }
