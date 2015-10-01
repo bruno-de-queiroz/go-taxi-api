@@ -11,6 +11,7 @@ import (
 	"github.com/creativelikeadog/go-taxi-api/app/models"
 	"github.com/creativelikeadog/go-taxi-api/core"
 	"time"
+	"strconv"
 )
 
 type AuthService struct {
@@ -68,9 +69,13 @@ func (s *AuthService) Authorize(r *http.Request) (id *bson.ObjectId, err error) 
 }
 
 func (s *AuthService) createToken(id bson.ObjectId) (token string, err error) {
+	expiration, err := strconv.Atoi(s.config.Expiration)
+	if err != nil {
+		expiration = 72
+	}
 	t := jwt.New(jwt.SigningMethodHS256)
 	t.Claims["user"] = id.Hex()
-	t.Claims["exp"] = time.Now().Add(time.Hour * time.Duration(s.config.Expiration)).Unix()
+	t.Claims["exp"] = time.Now().Add(time.Hour * time.Duration(int64(expiration))).Unix()
 	return t.SignedString([]byte(s.config.Secret))
 }
 

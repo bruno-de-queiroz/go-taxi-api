@@ -163,7 +163,7 @@ func NewConfig(e string, p string) (c *Config, err error) {
 		cfg,
 		e,
 		&DatabaseConfig{db.UString("host"), db.UString("name"), db.UString("username"), db.UString("password")},
-		&TokenConfig{tk.UInt("expiration"), tk.UString("secret")},
+		&TokenConfig{tk.UString("expiration"), tk.UString("secret")},
 		&EmailConfig{em.UString("host"), em.UString("port"), em.UString("username"), em.UString("password"), em.UString("sender")},
 		&LogConfig{lg.UBool("rotate"), lg.UString("level"), lg.UString("file"), lg.UString("format")},
 		cfg.UString("name"),
