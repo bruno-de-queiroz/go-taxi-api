@@ -75,7 +75,7 @@ func (e *EmailSender) Send(et *EmailTemplate) (err error) {
 		return err
 	}
 
-	server := fmt.Sprintf("%s:%d", e.Host, e.Port)
+	server := fmt.Sprintf("%s:%s", e.Host, e.Port)
 
 	auth := smtp.PlainAuth(
 		"",

@@ -12,7 +12,7 @@ import (
 
 const (
 	CONFIG_PATH = "/config/"
-	VIEW_PATH   = "/views/"
+	VIEW_PATH = "/views/"
 )
 
 type Application struct {
@@ -29,9 +29,9 @@ func NewApplication(p string, cfgs ...string) *Application {
 		env = "development"
 	}
 
-	fmt.Println(path.Join(p, CONFIG_PATH, "/environments/", env+".yml"))
+	fmt.Println(path.Join(p, CONFIG_PATH, "/environments/", env + ".yml"))
 
-	c, err := NewConfig(env, path.Join(p, CONFIG_PATH, "/environments/", env+".yml"))
+	c, err := NewConfig(env, path.Join(p, CONFIG_PATH, "/environments/", env + ".yml"))
 	if err != nil {
 		panic(err)
 	}
@@ -97,5 +97,5 @@ func NewApplication(p string, cfgs ...string) *Application {
 }
 
 func (a Application) Start() {
-	a.Run(fmt.Sprintf("%s:%d", a.Config.Host, a.Config.Port))
+	a.Run(fmt.Sprintf("%s", a.Config.Host))
 }

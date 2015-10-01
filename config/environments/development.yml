@@ -1,11 +1,10 @@
 name: "TaxiApp"
 version: "0.0.1"
-port: 80
-host: "0.0.0.0"
+host: "0.0.0.0:80"
 log:
   level: debug
 database:
-  host: $MONGO_PORT_27017_TCP_ADDR
+  host: $MONGOLAB_URI
   name: "development"
 token:
   expiration : 72

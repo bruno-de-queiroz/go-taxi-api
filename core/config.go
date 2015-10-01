@@ -19,7 +19,7 @@ const (
 
 var (
 	enviroments = [3]string{"production", "development", "test"}
-	regex       = regexp.MustCompile(`(.*)\$([^\n\t\s]+)`)
+	regex = regexp.MustCompile(`(.*)\$([^\n\t\s]+)`)
 )
 
 func (e Enviroment) String() string {
@@ -35,7 +35,7 @@ type LogConfig struct {
 
 type EmailConfig struct {
 	Host     string
-	Port     int
+	Port     string
 	Username string
 	Password string
 	Sender   string
@@ -43,14 +43,13 @@ type EmailConfig struct {
 
 type DatabaseConfig struct {
 	Host     string
-	Port     int
 	Name     string
 	Username string
 	Password string
 }
 
 type TokenConfig struct {
-	Expiration int
+	Expiration string
 	Secret     string
 }
 
@@ -64,7 +63,6 @@ type Config struct {
 	Name       string
 	Version    string
 	Host       string
-	Port       int
 	Mode       string
 }
 
@@ -109,7 +107,7 @@ func parseEnvs(p string) ([]byte, error) {
 			parsed = fmt.Sprintf("%s\"%s\"\n", p[0][1], os.Getenv(p[0][2]))
 		}
 
-		data = append(data,[]byte(parsed)...)
+		data = append(data, []byte(parsed)...)
 	}
 
 
@@ -164,14 +162,13 @@ func NewConfig(e string, p string) (c *Config, err error) {
 	c = &Config{
 		cfg,
 		e,
-		&DatabaseConfig{db.UString("host"), db.UInt("port"), db.UString("name"), db.UString("username"), db.UString("password")},
+		&DatabaseConfig{db.UString("host"), db.UString("name"), db.UString("username"), db.UString("password")},
 		&TokenConfig{tk.UInt("expiration"), tk.UString("secret")},
-		&EmailConfig{em.UString("host"), em.UInt("port"), em.UString("username"), em.UString("password"), em.UString("sender")},
+		&EmailConfig{em.UString("host"), em.UString("port"), em.UString("username"), em.UString("password"), em.UString("sender")},
 		&LogConfig{lg.UBool("rotate"), lg.UString("level"), lg.UString("file"), lg.UString("format")},
 		cfg.UString("name"),
 		cfg.UString("version"),
 		cfg.UString("host"),
-		cfg.UInt("port"),
 		mode,
 	}
 
