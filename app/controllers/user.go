@@ -5,9 +5,9 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"net/http"
-	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
-	"github.com/creativelikeadog/taxiapp.com.br/app/services"
-	"github.com/creativelikeadog/taxiapp.com.br/core"
+	"github.com/creativelikeadog/go-taxi-api/app/forms"
+	"github.com/creativelikeadog/go-taxi-api/app/services"
+	"github.com/creativelikeadog/go-taxi-api/core"
 )
 
 type UserController struct {

@@ -1,8 +1,8 @@
 package mailers
 
 import (
-	"github.com/creativelikeadog/taxiapp.com.br/app/models"
-	"github.com/creativelikeadog/taxiapp.com.br/core"
+	"github.com/creativelikeadog/go-taxi-api/app/models"
+	"github.com/creativelikeadog/go-taxi-api/core"
 )
 
 func NewUserRegisteredEmail(user *models.User) *core.EmailTemplate {

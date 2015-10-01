@@ -3,9 +3,9 @@ package services
 import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"github.com/creativelikeadog/taxiapp.com.br/app/forms"
-	"github.com/creativelikeadog/taxiapp.com.br/app/models"
-	"github.com/creativelikeadog/taxiapp.com.br/core"
+	"github.com/creativelikeadog/go-taxi-api/app/forms"
+	"github.com/creativelikeadog/go-taxi-api/app/models"
+	"github.com/creativelikeadog/go-taxi-api/core"
 )
 
 type DriverService struct {

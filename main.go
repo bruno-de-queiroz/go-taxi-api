@@ -2,8 +2,8 @@ package main
 
 import (
 	"path/filepath"
-	"github.com/creativelikeadog/taxiapp.com.br/app/controllers"
-	"github.com/creativelikeadog/taxiapp.com.br/core"
+	"github.com/creativelikeadog/go-taxi-api/app/controllers"
+	"github.com/creativelikeadog/go-taxi-api/core"
 )
 
 func main() {
