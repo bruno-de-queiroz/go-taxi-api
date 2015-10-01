@@ -154,7 +154,7 @@ func NewDriverService(app *core.Application) *DriverService {
 	})
 
 	if err != nil {
-		app.Logger.Error(err)
+		panic(err)
 	}
 
 	return &DriverService{ad}
