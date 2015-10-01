@@ -29,6 +29,8 @@ func NewApplication(p string, cfgs ...string) *Application {
 		env = "development"
 	}
 
+	fmt.Println(path.Join(p, CONFIG_PATH, "/environments/", env+".yml"))
+
 	c, err := NewConfig(env, path.Join(p, CONFIG_PATH, "/environments/", env+".yml"))
 	if err != nil {
 		panic(err)
