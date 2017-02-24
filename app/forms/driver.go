@@ -1,14 +1,14 @@
 package forms
 
 import (
+	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 	"strconv"
 	"strings"
-	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 )
 
 type DriverForm struct {
 	Name     *string `form:"name" json:"name"`
-	CarPlate *string `form:"carPlate" json:"carPlate"`
+	CarPlate *string `form:"carPlate" json:"car_plate"`
 }
 
 func (f *DriverForm) IsValid() (err error) {
@@ -17,12 +17,12 @@ func (f *DriverForm) IsValid() (err error) {
 
 	if f.Name == nil || *f.Name == "" {
 		e.Put("name", "is required.")
-	} else if !CARPLATE_REGEX.MatchString(*f.CarPlate) {
-		e.Put("carPlate", "is invalid.")
 	}
 
 	if f.CarPlate == nil || *f.CarPlate == "" {
-		e.Put("carPlate", "is required.")
+		e.Put("car_plate", "is required.")
+	} else if !CARPLATE_REGEX.MatchString(*f.CarPlate) {
+		e.Put("car_plate", "is invalid.")
 	}
 
 	if e.Size() != 0 {
@@ -35,7 +35,7 @@ func (f *DriverForm) IsValid() (err error) {
 type DriverStatusForm struct {
 	Latitude  *float64 `form:"latitude" json:"latitude"`
 	Longitude *float64 `form:"longitude" json:"longitude"`
-	Available *bool    `form:"driverAvailable" json:"driverAvailable"`
+	Available *bool    `form:"driverAvailable" json:"driver_available"`
 }
 
 func (f *DriverStatusForm) IsValid() (err error) {
@@ -97,7 +97,6 @@ func (d *DriverInAreaForm) IsValid() (err error) {
 		}
 
 	}
-
 
 	if d.Ne == "" {
 

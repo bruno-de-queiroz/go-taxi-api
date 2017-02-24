@@ -1,13 +1,13 @@
 package controllers
 
 import (
+	"github.com/creativelikeadog/go-taxi-api/app/forms"
+	"github.com/creativelikeadog/go-taxi-api/app/services"
+	"github.com/creativelikeadog/go-taxi-api/core"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"net/http"
-	"github.com/creativelikeadog/go-taxi-api/app/forms"
-	"github.com/creativelikeadog/go-taxi-api/app/services"
-	"github.com/creativelikeadog/go-taxi-api/core"
 )
 
 type UserController struct {
@@ -61,7 +61,7 @@ func (C *UserController) Register(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, []byte(nil))
+	c.JSON(http.StatusCreated, nil)
 
 }
 

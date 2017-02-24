@@ -8,7 +8,7 @@ type UserForm struct {
 	Name                 *string `form:"name" json:"name"`
 	Email                *string `form:"email" json:"email"`
 	Password             *string `form:"password" json:"password"`
-	PasswordConfirmation *string `form:"password_confirmation" json:"password_confirmation"`
+	PasswordConfirmation *string `form:"passwordConfirmation" json:"password_confirmation"`
 }
 
 func (u *UserForm) IsValid() (err error) {
@@ -32,9 +32,9 @@ func (u *UserForm) IsValid() (err error) {
 	}
 
 	if u.PasswordConfirmation == nil || *u.PasswordConfirmation == "" {
-		e.Put("passwordConfirmation", "is required")
+		e.Put("password_confirmation", "is required")
 	} else if *u.Password != *u.PasswordConfirmation {
-		e.Put("passwords", "doesn't match.")
+		e.Put("password_confirmation", "doesn't match.")
 	}
 
 	if e.Size() != 0 {

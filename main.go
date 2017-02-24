@@ -16,10 +16,8 @@ func main() {
 	a := core.NewApplication(dir)
 
 	auth := controllers.NewAuthController(a)
-
 	a.POST("/login", auth.Login)
 	a.DELETE("/logout", auth.Authorize, auth.Logout)
-
 	a.POST("/reset", auth.Reset)
 	a.POST("/reset/:" + controllers.TOKEN_PARAM, auth.NewPassword)
 
