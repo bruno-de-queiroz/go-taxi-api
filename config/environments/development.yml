@@ -1,6 +1,6 @@
 name: "TaxiApp"
 version: "0.0.1"
-port: "80"
+port: "8080"
 log:
   level: "debug"
 database:

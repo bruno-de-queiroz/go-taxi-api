@@ -1,13 +1,14 @@
 package controllers
 
 import (
+	"net/http"
+
 	"github.com/creativelikeadog/go-taxi-api/app/forms"
 	"github.com/creativelikeadog/go-taxi-api/app/services"
 	"github.com/creativelikeadog/go-taxi-api/core"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"net/http"
 )
 
 type UserController struct {

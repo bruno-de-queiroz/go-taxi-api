@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gopkg.in/go-playground/validator.v5"
+	validator "gopkg.in/bluesuncorp/validator.v5"
 )
 
 // User contains user information

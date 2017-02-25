@@ -2,17 +2,18 @@ package core
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/satori/go.uuid"
 	"net/http"
 	"os"
 	"path"
 	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/satori/go.uuid"
 )
 
 const (
 	CONFIG_PATH = "/config/"
-	VIEW_PATH = "/views/"
+	VIEW_PATH   = "/views/"
 )
 
 type Application struct {
@@ -29,7 +30,7 @@ func NewApplication(p string, cfgs ...string) *Application {
 		env = "development"
 	}
 
-	c, err := NewConfig(env, path.Join(p, CONFIG_PATH, "/environments/", env + ".yml"))
+	c, err := NewConfig(env, path.Join(p, CONFIG_PATH, "/environments/", env+".yml"))
 	if err != nil {
 		panic(err)
 	}

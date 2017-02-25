@@ -2,16 +2,17 @@ package services
 
 import (
 	"fmt"
-	"github.com/dgrijalva/jwt-go"
-	"gopkg.in/mgo.v2/bson"
 	"net/http"
+	"strconv"
+	"time"
+
 	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 	"github.com/creativelikeadog/go-taxi-api/app/forms"
 	"github.com/creativelikeadog/go-taxi-api/app/mailers"
 	"github.com/creativelikeadog/go-taxi-api/app/models"
 	"github.com/creativelikeadog/go-taxi-api/core"
-	"time"
-	"strconv"
+	"github.com/dgrijalva/jwt-go"
+	"gopkg.in/mgo.v2/bson"
 )
 
 type AuthService struct {

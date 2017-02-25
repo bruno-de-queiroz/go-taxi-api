@@ -2,15 +2,16 @@ package controllers
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
 	"net/http"
 	"strconv"
+
 	"github.com/creativelikeadog/go-taxi-api/app/forms"
 	"github.com/creativelikeadog/go-taxi-api/app/models"
 	"github.com/creativelikeadog/go-taxi-api/app/services"
 	"github.com/creativelikeadog/go-taxi-api/core"
+	"github.com/gin-gonic/gin"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 )
 
 type DriverController struct {

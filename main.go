@@ -2,6 +2,7 @@ package main
 
 import (
 	"path/filepath"
+
 	"github.com/creativelikeadog/go-taxi-api/app/controllers"
 	"github.com/creativelikeadog/go-taxi-api/core"
 )
@@ -19,7 +20,7 @@ func main() {
 	a.POST("/login", auth.Login)
 	a.DELETE("/logout", auth.Authorize, auth.Logout)
 	a.POST("/reset", auth.Reset)
-	a.POST("/reset/:" + controllers.TOKEN_PARAM, auth.NewPassword)
+	a.POST("/reset/:"+controllers.TOKEN_PARAM, auth.NewPassword)
 
 	uc := controllers.NewUserController(a)
 	a.POST("/register", uc.Register)

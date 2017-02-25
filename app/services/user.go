@@ -2,13 +2,14 @@ package services
 
 import (
 	"errors"
-	"golang.org/x/crypto/bcrypt"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
+
 	"github.com/creativelikeadog/go-taxi-api/app/forms"
 	"github.com/creativelikeadog/go-taxi-api/app/mailers"
 	"github.com/creativelikeadog/go-taxi-api/app/models"
 	"github.com/creativelikeadog/go-taxi-api/core"
+	"golang.org/x/crypto/bcrypt"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 )
 
 type TokenType int

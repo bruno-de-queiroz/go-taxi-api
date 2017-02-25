@@ -1,9 +1,10 @@
 package forms
 
 import (
-	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 	"strconv"
 	"strings"
+
+	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 )
 
 type DriverForm struct {

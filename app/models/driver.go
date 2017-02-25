@@ -1,9 +1,10 @@
 package models
 
 import (
+	"time"
+
 	"github.com/creativelikeadog/go-taxi-api/app/forms"
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 type Driver struct {

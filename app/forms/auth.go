@@ -1,4 +1,5 @@
 package forms
+
 import (
 	"github.com/creativelikeadog/go-taxi-api/app/exceptions"
 )
@@ -67,7 +68,7 @@ func (u *PasswordForm) IsValid() (err error) {
 
 	if u.PasswordConfirmation == nil || *u.PasswordConfirmation == "" {
 		e.Put("passwordConfirmation", "is required")
-	}else if *u.Password != *u.PasswordConfirmation {
+	} else if *u.Password != *u.PasswordConfirmation {
 		e.Put("passwordConfirmation", "doesn't match.")
 	}
 

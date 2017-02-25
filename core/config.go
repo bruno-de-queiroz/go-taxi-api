@@ -4,9 +4,10 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	"github.com/olebedev/config"
 	"os"
 	"regexp"
+
+	"github.com/olebedev/config"
 )
 
 type Enviroment int
@@ -19,7 +20,7 @@ const (
 
 var (
 	enviroments = [3]string{"production", "development", "test"}
-	regex = regexp.MustCompile(`(.*)\$([^\n\t\s]+)`)
+	regex       = regexp.MustCompile(`(.*)\$([^\n\t\s]+)`)
 )
 
 func (e Enviroment) String() string {

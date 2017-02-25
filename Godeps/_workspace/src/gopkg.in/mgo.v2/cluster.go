@@ -33,9 +33,10 @@ import (
 	"sync"
 	"time"
 
-	"gopkg.in/mgo.v2/bson"
 	"strconv"
 	"strings"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 // ---------------------------------------------------------------------------
